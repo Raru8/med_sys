@@ -1,0 +1,45 @@
+<main>
+
+  <div class="box">
+    <div class="box__picture">
+      <p>Seu  <span>consultório médico</span> <br> mais centralizado, ágil e inteligente</p>
+
+      <img src="/assets/background-login.svg" alt="">
+    </div>
+
+    <div class="box__login">
+
+      <div class="box__text">
+        <p>Bem-vindo</p>
+        <span>Sua clinica em boas mãos</span>
+      </div>
+
+      <form>
+        <label for="email">Email:</label>
+        <input [(ngModel)]="email" name="email" id="email" type="email" placeholder="&#xfa47;">
+
+        <label for="password">Senha:</label>
+        <input [(ngModel)]="password" name="email" id="password" type="password" placeholder="&#xf6da;">
+
+        <button (click)="onLogin(email, password)">
+          <i class="ti ti-login"></i>
+          Login
+        </button>
+
+        <p>ou</p>
+
+        <div class="other__logins">
+          <button>
+            <img src="/assets/Google.png" alt="">
+            <p>Google</p>
+          </button>
+
+          <button>
+            <img src="/assets/Facebook.png" alt="">
+            <p>Facebook</p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
