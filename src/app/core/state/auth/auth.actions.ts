@@ -14,3 +14,12 @@ export const loginFailure = createAction(
   '[Auth] Login Failure',
   props<{error: any}>()
 );
+
+export const checkAuthentication = createAction(
+  '[Auth] Check Authentication',
+);
+
+export const setAuthenticationStatus = createAction(
+  '[Auth] Set Authentication Status',
+  props<{isAuthenticated: boolean}>()
+)

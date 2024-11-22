@@ -57,4 +57,15 @@ export class AuthEffects {
       ),
     { dispatch: false }
   );
+
+  checkAuthentication$ = createEffect(
+    ()=>
+      this.actions$.pipe(
+        ofType(AuthActions.checkAuthentication),
+        switchMap(()=>{
+          const token = this.cookieService.check('token')
+          return [AuthActions.setAuthenticationStatus({isAuthenticated: token})]
+        })
+      )
+  )
 }
